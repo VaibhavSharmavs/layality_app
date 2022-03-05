@@ -28,12 +28,7 @@ class Repository {
     Response response;
     var dio = Dio();
     log(baseURL + authentication + authenticate);
-    response = await dio.post(baseURL + authentication + authenticate, data: {
-      "userId": 0,
-      "userName": "L004",
-      "password": "pass@123",
-      "otp": "string"
-    });
+    response = await dio.post(baseURL + authentication + authenticate, data: json);
     log(response.data.toString());
   }
 }

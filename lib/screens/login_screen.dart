@@ -1,7 +1,6 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:vaibhav_projects/screens/loyality_points_screen.dart';
+import 'package:vaibhav_projects/router/routes_constants.dart';
 import 'package:vaibhav_projects/state_management/loyality_points_state_mgmt.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -93,6 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                   onPressed: (){
                     loyaltyPointsState.login();
+                    Navigator.pushNamed(context, RoutesConstants.homeScreen);
 
               }, child: const Text('Continue',
               style: TextStyle(

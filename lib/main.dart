@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vaibhav_projects/router/router.dart' as router;
 import 'package:vaibhav_projects/screens/login_screen.dart';
-import 'package:vaibhav_projects/screens/loyality_points_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +27,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
+      onGenerateRoute: router.Router.generateRoute,
+
       home: const LoginScreen(),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vaibhav_projects/screens/login_screen.dart';
 import 'package:vaibhav_projects/screens/loyality_points_screen.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LoyaltyPointsScreen(),
+      home: const LoginScreen(),
     );
   }
 }

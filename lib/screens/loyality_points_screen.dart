@@ -15,7 +15,6 @@ class _LoyaltyPointsState extends State<LoyaltyPointsScreen> {
   void initState() {
     loyaltyPointsState.getPoints();
     loyaltyPointsState.getPointDetails();
-    loyaltyPointsState.login();
 
     super.initState();
   }

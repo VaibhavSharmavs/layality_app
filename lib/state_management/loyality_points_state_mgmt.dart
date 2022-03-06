@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:vaibhav_projects/models/login/login_request_model.dart';
+import 'package:vaibhav_projects/models/login/login_response_model.dart';
 import 'package:vaibhav_projects/network/services.dart';
 
 class LoyaltyPointsState extends ChangeNotifier {
   Repository repository = Repository();
+  LoginResponseModel loginResponseModel = LoginResponseModel();
 
   void getPoints() {
     repository.getPointsSummary();
@@ -20,6 +22,8 @@ class LoyaltyPointsState extends ChangeNotifier {
              password: 'pass@123',
              otp: 'otp');
 
-    repository.login(loginRequestModel.toJson());
+    repository.login(loginRequestModel.toJson()).then((value) => {
+      loginResponseModel =value,
+    });
   }
 }
